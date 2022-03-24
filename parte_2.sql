@@ -65,7 +65,7 @@ select * from estadios where publico_pagante > 100000;
 
 select * from estadios where publico_pagante > 50000 and publico_pagante < 100000;
 
-select * from estadios where estadio like '/y$/';
+select * from estadios where estadio like '%y';
 
 ALTER TABLE
 	estadios
