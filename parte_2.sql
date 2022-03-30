@@ -2,26 +2,61 @@ alter table
 	kopas 
 add column pts INTEGER;
 
-drop table if exists kopas;
+update 
+	kopas 
+set 
+	pts = 237
+where 
+	selecao = 'Brasil';
 
-create table if not exists kopas(
-	id BIGSERIAL primary key,
-	selecao VARCHAR(128) unique, 
-	qnt_copas INTEGER,
-	pts INTEGER 
-);
+update 
+	kopas 
+set 
+	pts = 221
+where 
+	selecao = 'Alemanha';
 
-insert into
-	kopas ("selecao", "qnt_copas", "pts")
-values
-	('Brasil', 5, 237),
-	('Alemanha', 4, 221),
-	('Itália', 4, 156),
-	('Argentina', 2, 144),
-	('França', 2, 115),
-	('Uruguai', 2, 84),
-	('Inglaterra', 1, 108),
-	('Espanha', 1, 105);
+update 
+	kopas 
+set 
+	pts = 156
+where 
+	selecao = 'Itália';
+
+update 
+	kopas 
+set 
+	pts = 144
+where 
+	selecao = 'Argentina';
+
+update 
+	kopas 
+set 
+	pts = 115
+where 
+	selecao = 'França';
+
+update 
+	kopas 
+set 
+	pts = 84
+where 
+	selecao = 'Uruguai';
+
+update 
+	kopas 
+set 
+	pts = 108
+where 
+	selecao = 'Inglaterra';
+
+update 
+	kopas 
+set 
+	pts = 105
+where 
+	selecao = 'Espanha';
 
 select * from kopas;
 
